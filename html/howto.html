@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/salt.css">
+    
+    <style>
+        .style {
+            border: 1px solid green;
+            border-left: 5px solid green;
+        }
+
+        .warning {
+            border-left: 5px solid red;
+            background-color: #ffc7c7;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>CSS How To..</h1>
+    <a href="syntax.html"><img src="../image/Previous.PNG"></a>
+    <a class="forward" href="colors.html"><img src="../image/Next.PNG"></a>
+    <p>When a browsers reads a style sheet, it will format the HTML document acording to the information in the style sheet.</p>
+    <h2>Three Ways to Insert CSS</h2>
+    <p>There are three ways of inserting a style sheet:</p>
+    <div class="style">
+        <ul>
+            <li>External style sheet</li>
+            <li>Internal style sheet</li>
+            <li>Inline style sheet</li>
+        </ul>
+    </div>
+    <h2>External Style Sheet</h2>
+    <p>With an external style sheet, you can change the look of an entire website by changing just one file!</p>
+    <p>Each page must include a reference to the external style sheet file inside the &lt;link> element. The &lt;link> goes inside the &lt;head> section:</p>
+    <p>An external style sheet can be written in any text editor. The file should not contain any html tags. The style sheet file must be saved with a .css extension.</p>
+    <p>Here is how the "mystyle.css" looks:</p>
+    <div class="warning">
+        <p><strong>Note:</strong> Do not add a space between the property value and the unit (such as <span class="highlight">margin-left: 20px;</span>). The correct way is: <span class="highlight">margin-left: 20px;</span></p>
+    </div>
+    <h2>Internal Style Sheet</h2>
+    <p>An internal style sheet may be used if one single page has a unique style.</p>
+    <p>Internal styles are defined within the &lt;style> element, inside the &lt;head> of an HTML page:</p>
+    <h2>Inline Styles</h2>
+    <p>An inline style may be used to apply a unique style for a single element.</p>
+    <p>To use inline styles, add the style attribute to the relevant element. THe style attribute can contain any CSS property.</p>
+    <p>The example below shoes how to change a color and the left margin of a &lt;h1> element:</p>
+    <div class="hint"><p><strong>Tip:</strong> An inline style loses many of the advantages of a stylesheet (by mixing content with presentation). Use this method sparingly.</p></div>
+    <h2>Multiple Style Sheets</h2>
+    <p> If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will beused.</p>
+    <h3>Sxample</h3>
+    <p>Assume that an external style sheet has the following style for the &lt;h1> element:</p>
+    <p>then, assume that an internal style sheet also has the following style for the &lt;h1> element:</p>
+    <p>If the internal style is defined agter the link to the external style sheet, the &lt;h1> elements will be "orange":</p>
+    <p>However, if the internal style is defined before the link to the external style sheet, the &lt;h1> elements will be "navy":</p>
+    <h2>Cascading Order</h2>
+    <p>What style will be used when ther is more than one style specified for an HTML element?</p>
+    <p>All the styles in a page will cascade into a new virtual style sheet by the following reules, where number one has the highiest priority:</p>
+    <ol>
+        <li>Inline style (inside an HTML element)</li>
+        <li>External and internal style sheets (in the head section)</li>
+        <li>Browser default</li>
+    </ol>
+    <p>So, an inline styloe has the highiest priority, and will override external and internal sytles and browser defaults.</p>
+</body>
+</html>

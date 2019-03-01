@@ -1,0 +1,19 @@
+ .basics {
+                background-color: #caefca;
+     border-left: 5px solid green;
+     padding-left: 10px;
+    }
+.hint {
+                background-color: lightgoldenrodyellow;
+                border-left: 2px solid yellow;
+            }
+ .forward {
+                float: right;
+            }
+.highlight {
+            background-color: gainsboro;
+            color:red;
+        }
+.back{
+    background-image: url("../image/mountain.jpg");
+}

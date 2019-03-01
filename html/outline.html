@@ -1,0 +1,212 @@
+<! DOCTYPE html>
+<html>
+<head>
+    <title>CSS Outline</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <style>
+        p.one {
+            border: 1px solid black;
+            outline: 10px solid green;
+        }
+        p.dotted {outline-style: dotted;}
+p.dashed {outline-style: dashed;}
+p.solid {outline-style: solid;}
+p.double {outline-style: double;}
+p.groove {outline-style: groove;}
+p.ridge {outline-style: ridge;}
+p.inset {outline-style: inset;}
+p.outset {outline-style: outset;}
+        p.ex1 {
+            border:1px solid black;
+            outline-style: solid;
+            outline-color: red;
+        }
+        p.ex2 {
+            border:1px solid black;
+            outline-style:double;
+            outline-color: green;
+        }
+        p.ex3 {
+            border:1px solid black;
+            outline-style: outset;
+            outline-color: yellow;
+        }
+        p.ex4 {
+            border:1px solid yellow;
+            outline-style: solid;
+            outline-color: invert;
+        }
+        p.ex5 {
+            border:1px solid black;
+            outline-style: solid;
+            outline-color: red;
+            outline-width: thin;
+        }
+        p.ex6 {
+            border:1px solid black;
+            outline-style: solid;
+            outline-color: red;
+            outline-width: medium;
+        }
+        p.ex7 {
+            border: 1px solid black;
+            outline-style: solid;
+            outline-color: red;
+            outline-width: thick;
+        }
+        p.ex8 {
+            border:1px solid black;
+            outline-style: solid;
+            outline-color: red;
+            outline-width: 4px;
+        }
+        p.ex9 {
+            outline:dashed;
+        }
+        p.ex10 {
+            outline: dotted red;
+        }
+        p.ex11 {
+            outline:5px solid yellow;
+        }
+        p.ex12 {
+            outline:thick ridge pink;
+        }
+        p.ex13 {
+            margin: 30px;
+            border:1px solid black;
+            outline:1px solid red;
+            outline-offset: 15px;
+        }
+        p.ex14 {
+            margin:30px;
+            background: yellow;
+            border: 1px solid black;
+            outline:1px solid red;
+            outline-offset: 15px;
+        }
+        table, tr, td, th {
+            border:3px solid black;
+            border-collapse: collapse;
+        }
+        th {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Outline</h1>
+    <a href="boxmodel.html"><img src="../image/Previous.PNG"></a>
+    <a class="forward" href="text.html"><img src="../image/Next.PNG"></a>
+    <p class="one">This element has a black border and a green outline with a width of 10px.</p>
+    <h2>CSS Outline</h2>
+    <p>An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out".</p>
+    <img src="../image/Outline.PNG">
+    <p>CSS has the following outline properties:</p>
+    <ul>
+        <li><a class="highlight">outline-style</a></li>
+        <li><a class="highlight">outline-color</a></li>
+        <li><a class="highlight">outline-width</a></li>
+        <li><a class="highlight">outline-offset</a></li>
+        <li><a class="highlight">outline</a></li>
+    </ul>
+    <p class="hint"><strong>Note:</strong> Outline differs from borders! Unlike border, the otline is drawn outside the element's border, and may overlap other content. Also, the outline is NOT a part of the element's dimension; the elemet's total width and height is not affected by the eidth of the outline.</p>
+    <h2>Outline Style</h2>
+    <p>The <a class="highlight">outline-style</a> property specifies the style of the outline, and can have one of the following values:</p>
+    <ul>
+        <li><a class="highlight">dotted</a> - Defines a dotted outline</li>
+        <li><a class="highlight">dashed</a> - Defines a dashed outline</li>
+        <li><a class="highlight">solid</a> - Defines a solid outline</li>
+        <li><a class="highlight">double</a> - Defines a double outline</li>
+        <li><a class="highlight">groove</a> - Defines a 3D grooved outline</li>
+        <li><a class="highlight">ridge</a> - Defines a 3D ridged outline</li>
+        <li><a class="highlight">inset</a> - Defines a 3D inset outline</li>
+        <li><a class="highlight">outset</a> - Defines a 3D outset outline</li>
+        <li><a class="highlight">none</a> - Defines no outline</li>
+        <li><a class="highlight">hidden</a> - Defines a hidden outline</li>
+    </ul>
+    <p>The following shows the different <a class="highlight">outline-style</a> values:</p>
+    <p class="dotted">A dotted outline.</p>
+    <p class="dashed">A dashed outline.</p>
+    <p class="solid">A solid outline.</p>
+    <p class="double">A double outline</p>
+    <p class="groove">A groove outline. The effect depends on the outline-color value.</p>
+    <p class="ridge">A ridge outline. The effect depends on the outline-color value.</p>
+    <p class="inset">An inset outline. The effect depends on the outline-color value.</p>
+    <p class="outset">An outset outline. The effect depends on the outline-color value.</p>
+    <p class="hint"><strong>Note:</strong> None of the other outline properties will have any effect, unless the <a class="highlight">outline-style</a> property is set!</p>
+    <h2>Outline Color</h2>
+    <p>The <a class="highlight">outline-color</a> property is used to set the color of the outline.</p>
+    <p>The color can be set by:</p>
+    <ul>
+        <li>name - specify a color name, like "red"</li>
+        <li>RGB - specify a hex value, like "#rgb(255,0,0)"</li>
+        <li>Hex - specify a hex value, like "#ff0000"</li>
+        <li>invert - performs a color inversion (which ensures that the outline is visible, regardless of color background)</li>
+    </ul>
+    <p>The following example shows some different outlines with different colors. Also notice that these elements also have a thin black border inside the outline:</p>
+    <p class="ex1">A solid red outline.</p>
+    <p class="ex2">A double green outline.</p>
+    <p class="ex3">An outset yellow outline.</p>
+    <p>The following example uses <a class="highlight">outline-color: invert</a>, which performs a color invasion. This ensures that the outline is visible, regardless of color background:</p>
+    <p class="ex4">A solid invert outline.</p>
+    <h2>Outline Width</h2>
+    <p>The <a class="highlight">outline-width</a> property specifies the width of the outline, and can have one og the following values:</p>
+    <ul>
+        <li>thin (typically 1px)</li>
+        <li>medium (typically 3px)</li>
+        <li>thick (typically 5px)</li>
+        <li>A specific size (in px, pt, cm, em, etc)</li>
+    </ul>
+    <p>The following example shoes some outlines with different widths:</p>
+    <p class="ex5">A thin outline.</p>
+    <p class="ex6">A medium outline.</p>
+    <p class="ex7">A thick outline.</p>
+    <p class="ex8">A 4px thick outline.</p>
+    <h2>Outline - Shorthand property</h2>
+    <p>The <a class="highlight">outline</a> property is a shorthand property for setting the following individual outline properties:</p>
+    <ul>
+        <li><a class="highlight">outline-width</a></li>
+        <li><a class="highlight">outline-style</a> (required)</li>
+        <li><a class="highlight">outline-color</a></li>
+    </ul>
+    <p>The following example shows some outlines specified with the shorthand <a class="highlight">outline</a> property.</p>
+    <p class="ex9">A dashed outline.</p>
+    <p class="ex10">A dotted red outline.</p>
+    <p class="ex11">A 5px solid yellow outline.</p>
+    <p class="ex12">A thick ridge pink outline.</p>
+    <h2>Outline Offset</h2>
+    <p>The <a class="highlight">outline-offset</a> property adds space between an outline and the edge/border of an element. The space between an element and its outline is transparent.</p>
+    <p>The following example specifies an outline 15px outside the border edge:</p>
+    <p class="ex13">This paragraph has an outline 15px outside the border edge.</p>
+    <p>The following example shows that the space between an element and its outline is transparent:</p>
+    <p class="ex14">This paragraph has an outline of 15px outside the border edge.</p>
+    <h2>All CSS Outline Properties</h2>
+    <table>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><a href="https://www.w3schools.com/cssref/pr_outline.asp">outline</a></td>
+            <td>A shorthand property for setting outline-width, outline-style, and outline-color in one declaration.</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.w3schools.com/cssref/pr_outline-color.asp">outline-color</a></td>
+            <td>Sets the color of an outline</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.w3schools.com/cssref/css3_pr_outline-offset.asp">outline-offset</a></td>
+            <td>Specifies the space between an outline and the edge or border of an element</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.w3schools.com/cssref/pr_outline-style.asp">outline-style</a></td>
+            <td>Sets the style of an outline</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.w3schools.com/cssref/pr_outline-width.asp">outline-width</a></td>
+            <td>Sets the width of an outline</td>
+        </tr>
+    </table>
+</body>
+</html>
